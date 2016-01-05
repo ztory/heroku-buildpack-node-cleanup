@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+BUILD_DIR=$1
+
 echo "-----> Deleting the node_modules folder..."
-rm -r node_modules
+rm -r "$BUILD_DIR/node_modules"
 echo "       Done!"
