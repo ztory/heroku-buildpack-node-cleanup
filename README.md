@@ -1,15 +1,13 @@
-# heroku-buildpack-multi
+# heroku-buildpack-node-cleanup
 
-Use multiple buildpacks on your app
+Deletes the node_modules folder to decrease slug size.
 
 ## Usage
 
-    $ heroku buildpacks:set https://github.com/ddollar/heroku-buildpack-multi.git
+    $ heroku buildpacks:set https://github.com/ztory/heroku-buildpack-node-cleanup.git
+
+Or add it to the .buildpacks file if using [heroku-buildpack-multi](https://github.com/ddollar/heroku-buildpack-multi):
 
     $ cat .buildpacks
-    https://github.com/heroku/heroku-buildpack-nodejs.git#0198c71daa8
-    https://github.com/heroku/heroku-buildpack-ruby.git#v86
-
-## License
-
-MIT
+    ...
+    https://github.com/ztory/heroku-buildpack-node-cleanup.git
